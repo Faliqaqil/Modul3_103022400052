@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             cbSatuanAwal = new ComboBox();
-            comboBox2 = new ComboBox();
+            cbSatuanAkhir = new ComboBox();
             textBox1 = new TextBox();
             button1 = new Button();
             label1 = new Label();
@@ -49,14 +49,15 @@
             cbSatuanAwal.TabIndex = 0;
             cbSatuanAwal.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
-            // comboBox2
+            // cbSatuanAkhir
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Celcius", "Fahrenheit", "Kelvin", "Reamur" });
-            comboBox2.Location = new Point(132, 238);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(112, 33);
-            comboBox2.TabIndex = 1;
+            cbSatuanAkhir.FormattingEnabled = true;
+            cbSatuanAkhir.Items.AddRange(new object[] { "Celcius", "Fahrenheit", "Kelvin", "Reamur" });
+            cbSatuanAkhir.Location = new Point(132, 238);
+            cbSatuanAkhir.Name = "cbSatuanAkhir";
+            cbSatuanAkhir.Size = new Size(112, 33);
+            cbSatuanAkhir.TabIndex = 1;
+            cbSatuanAkhir.SelectedIndexChanged += cbSatuanAkhir_SelectedIndexChanged;
             // 
             // textBox1
             // 
@@ -73,6 +74,7 @@
             button1.TabIndex = 3;
             button1.Text = "Convert";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label1
             // 
@@ -130,7 +132,7 @@
             Controls.Add(label1);
             Controls.Add(button1);
             Controls.Add(textBox1);
-            Controls.Add(comboBox2);
+            Controls.Add(cbSatuanAkhir);
             Controls.Add(cbSatuanAwal);
             Name = "Form1";
             Text = "Form1";
@@ -141,7 +143,7 @@
         #endregion
 
         private ComboBox cbSatuanAwal;
-        private ComboBox comboBox2;
+        private ComboBox cbSatuanAkhir;
         private TextBox textBox1;
         private Button button1;
         private Label label1;
